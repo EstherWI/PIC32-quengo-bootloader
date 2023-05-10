@@ -145,6 +145,7 @@
 #include "configs/pontech.h"
 #include "configs/schmalzhaus.h"
 #include "configs/boxtec.h"
+#include "configs/quengo.h"
 
 #ifndef _CONFIG_VALID_
     #error    Board/CPU combination not defined

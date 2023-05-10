@@ -1,5 +1,5 @@
 
-BINPREFIX=/opt/microchip/xc32/v1.43/bin/xc32-
+BINPREFIX=/opt/microchip/xc32/v4.21/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
@@ -54,6 +54,16 @@ MCU_example-mx1=32MX120F032D
 DEF_example-mx1=-D_BOARD_EXAMPLE_MX1_
 LKR_example-mx1=MX1-2-boot-linkerscript.ld
 CFL_example-mx1=-mips16
+
+# Quengo configurations
+
+BIN_quengo-mx1=QUENGO_MX1
+OBJ_quengo-mx1=main.o
+CRT_quengo-mx1=crt0.S
+MCU_quengo-mx1=32MX270F256D
+DEF_quengo-mx1=-D_BOARD_QUENGO_MX_
+LKR_quengo-mx1=MX1-2-boot-linkerscript.ld
+CFL_quengo-mx1=-mips16
 
 #Microchip 32MZ starter kit.
 BIN_microchip-eth-sk-uart=Microchip_Eth_Starter_Kit_UART
