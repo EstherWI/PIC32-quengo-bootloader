@@ -1,5 +1,5 @@
 
-BINPREFIX=/opt/microchip/xc32/v4.21/bin/xc32-
+BINPREFIX=/opt/microchip/xc32/v1.43/bin/xc32-
 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
