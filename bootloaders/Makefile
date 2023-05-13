@@ -1,6 +1,6 @@
 
-BINPREFIX=/opt/microchip/xc32/v4.21/bin/xc32-
-
+BINPREFIX=/opt/microchip/chipkit-core/pic32/compiler/pic32-tools/bin/pic32-
+ 
 CC=${BINPREFIX}gcc
 CXX=${BINPREFIX}g++
 LD=${BINPREFIX}ld
@@ -61,7 +61,7 @@ BIN_quengo-mx1=QUENGO_MX1
 OBJ_quengo-mx1=main.o
 CRT_quengo-mx1=crt0.S
 MCU_quengo-mx1=32MX270F256D
-DEF_quengo-mx1=-D_BOARD_QUENGO_MX_
+DEF_quengo-mx1=-D_BOARD_QUENGO_MX1_
 LKR_quengo-mx1=MX1-2-boot-linkerscript.ld
 CFL_quengo-mx1=-mips16
 

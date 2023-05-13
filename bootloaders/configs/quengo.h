@@ -1,7 +1,7 @@
 /* Quengo Board */
 
 //************************************************************************
-#if defined(_BOARD_QUENGO_MX_)   // UART (Default) version
+#if defined(_BOARD_QUENGO_MX1_)   // UART (Default) version
 #define _CONFIG_VALID_
 // NOTE: As of 8/20/2013 the crystal on the board (v3.37 and above) is now 8MHz, so this bootloader has been updated
 
