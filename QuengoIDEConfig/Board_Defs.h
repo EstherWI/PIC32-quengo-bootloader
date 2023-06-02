@@ -47,7 +47,6 @@
 
 #if !defined(BOARD_DEFS_H)
 #define BOARD_DEFS_H
-#define _USB
 
 #include <inttypes.h>
 
@@ -58,28 +57,17 @@
 ** refer to periperhals on the board generically.
 */
 
-#define	_BOARD_NAME_	"chipKIT Lenny"
+#define	_BOARD_NAME_	"Quengo"
 
-// Definitions for Harmony
-#define _USB_PRODUCT_   'c','h','i','p','K','I','T',' ','L','e','n','n','y'
-#define _USB_PRODUCT_LENGTH_ 13
-#define _USB_MANUFACTURER_      'M','a','j','e','n','k','o',' ','T','e','c','h','n','o','l','o','g','i','e','s'
-#define _USB_MANUFACTURER_LENGTH_ 20
-#ifndef _USB_VID_
-#define _USB_VID_ 0x0403
-#endif
-#ifndef _USB_PID_
-#define _USB_PID_ 0xa662
-#endif
 
 // Definitions for old chipKIT core
-#define CDCACM_MAN "Majenko Technologies"
-#define CDCACM_PROD "chipKIT Lenny"
+#define CDCACM_MAN "Undefined"
+#define CDCACM_PROD "Quengo"
 #define CDCACM_AUTOSERIAL 1
 
 /* Define the peripherals available on the board.
 */
-#define	NUM_DIGITAL_PINS	30
+#define	NUM_DIGITAL_PINS	40
 #define	NUM_ANALOG_PINS		6
 #define NUM_OC_PINS			5
 #define	NUM_IC_PINS			0
@@ -302,20 +290,6 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 /* ------------------------------------------------------------ */
 /*					Serial Port Declarations					*/
 /* ------------------------------------------------------------ */
-
-/* Serial port 0 uses UART1 – for the serial monitor
-*/
-#define       _SER0_BASE           _UART2_BASE_ADDRESS
-#define       _SER0_IRQ            _UART2_ERR_IRQ
-#define       _SER0_VECTOR         _UART_2_VECTOR
-#define       _SER0_IPL_ISR        _UART2_IPL_ISR
-#define       _SER0_IPL            _UART2_IPL_IPC
-#define       _SER0_SPL            _UART2_SPL_IPC
-#define       _SER0_TX_OUT         PPS_OUT_U2TX 
-#define       _SER0_TX_PIN         1
-#define       _SER0_RX_IN          PPS_IN_U2RX
-#define       _SER0_RX_PIN         0
-
 
 /* Serial port 1 uses UART2
 */
