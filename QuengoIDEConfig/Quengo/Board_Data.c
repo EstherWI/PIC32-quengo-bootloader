@@ -411,10 +411,8 @@ const uint8_t output_compare_to_digital_pin_PGM[] = {
 
 const uint8_t external_int_to_digital_pin_PGM[] = {
 	NOT_PPS_PIN,		// INT0 is not mappable;    RB7
-	PIN_INT1,			// A3, B14, B0, B10, B9;    B9  INT1R = RPB9 = 4
-	PIN_INT2,			// A2, B6, A4, B13, B2;     B2  INT2R = RPB2 = 4
-	PIN_INT3,			// A1, B5, B1, B11, B8;     B8  INT3R = RPB8 = 4
-	PIN_INT4			// A0, B3, B4, B15, B7;     B4  INT4R = RPB4 = 2
+	PIN_INT0,			
+	PIN_INT3,			
 };
 
 /* ------------------------------------------------------------ */

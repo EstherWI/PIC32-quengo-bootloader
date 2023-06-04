@@ -67,22 +67,23 @@
 
 /* Define the peripherals available on the board.
 */
-#define	NUM_DIGITAL_PINS	40
-#define	NUM_ANALOG_PINS		6
-#define NUM_OC_PINS			5
-#define	NUM_IC_PINS			0
-#define	NUM_TCK_PINS		0
-#define	NUM_INT_PINS		5
+#define	NUM_DIGITAL_PINS	26
+#define	NUM_ANALOG_PINS		7
+#define NUM_OC_PINS			5 // ??
+#define	NUM_IC_PINS			0 // ??
+#define	NUM_TCK_PINS		0 // ??
+#define	NUM_INT_PINS		2
 
-#define	NUM_SERIAL_PORTS	2       
-#define	NUM_SPI_PORTS		1
-#define	NUM_I2C_PORTS		1       
+#define	NUM_SERIAL_PORTS	1     
+#define	NUM_SPI_PORTS		1 // não defini
+#define	NUM_I2C_PORTS		1     
 
 #define NUM_DSPI_PORTS		2
 #define NUM_DTWI_PORTS		2       
 
 /* Define I/O devices on the board.
 */
+// Nessa placa não precisa
 #define	NUM_LED				3
 #define NUM_BTN				1
 #define	NUM_SWT				0
@@ -135,6 +136,7 @@
 /*					Timer Pin Declarations						*/
 /* ------------------------------------------------------------ */
 
+// ??
 #define PIN_OC1		 6
 #define	PIN_OC2		 5
 #define	PIN_OC3		 3
@@ -157,11 +159,8 @@
 /*					Interrupt Pin Declarations					*/
 /* ------------------------------------------------------------ */
 
-#define	PIN_INT0	 2      // RB7 non-PPS
-#define	PIN_INT1	 3      // B9  INT1R = RPB9 = 4
-#define PIN_INT2	 4      // B2  INT2R = RPB2 = 4
-#define	PIN_INT3	 5      // B8  INT3R = RPB8 = 4
-#define	PIN_INT4	 6      // B4  INT4R = RPB4 = 2
+#define	PIN_INT0	 38      // RC5 = 2
+#define	PIN_INT3	 20      // RA1 = 3
 
 /* ------------------------------------------------------------ */
 /*					SPI Pin Declarations						*/
@@ -169,10 +168,10 @@
 /* These symbols are defined for compatibility with the original
 ** SPI library and the original pins_arduino.h. 
 */
-static const uint8_t SS   = 10;
-static const uint8_t MISO = 25;
-static const uint8_t MOSI =	27;
-static const uint8_t SCK  = 26;
+// static const uint8_t SS   = 10;
+// static const uint8_t MISO = 25;
+// static const uint8_t MOSI =	27;
+// static const uint8_t SCK  = 26;
 
 /* The Digilent DSPI library uses these ports.
 */
@@ -185,12 +184,13 @@ static const uint8_t SCK  = 26;
 ** used to map an analog pin number to the corresponding digital
 ** pin number.
 */
-#define	A0		14
-#define	A1		15
-#define A2		16
-#define A3		17
-#define A4		18
-#define A5		19
+#define	A0		19 // RA0
+#define	A1		20 // RA1
+#define A4		23 // RB2
+#define A5		24 // RB3
+#define A9      15 // RB15
+#define A10     14 // RB14
+#define A11     26 // RC1
 
 /* ------------------------------------------------------------ */
 /*					Change Notice Pins							*/
@@ -198,6 +198,7 @@ static const uint8_t SCK  = 26;
 /* These define the pin numbers for the various change notice
 ** pins.
 */
+// ???
 #define	PIN_CN0	     0  //  0   J4-1    RB5     TMS/RPB5/USBID/RB5
 #define	PIN_CN1	     1  //  1   J4-2    RB7     TDI/RPB7/CTED3/PMD5/INT0/RB7   
 #define	PIN_CN2	     2  //  2   J4-3    RB8     TCK/RPB8/SCL1/CTED10/PMD4/RB8
@@ -291,18 +292,18 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 /*					Serial Port Declarations					*/
 /* ------------------------------------------------------------ */
 
-/* Serial port 1 uses UART2
+/* Serial port 0 uses UART1 � for the serial monitor
 */
-#define       _SER1_BASE           _UART1_BASE_ADDRESS
-#define       _SER1_IRQ            _UART1_ERR_IRQ
-#define       _SER1_VECTOR         _UART_1_VECTOR
-#define       _SER1_IPL_ISR        _UART1_IPL_ISR
-#define       _SER1_IPL            _UART1_IPL_IPC
-#define       _SER1_SPL            _UART1_SPL_IPC
-#define       _SER1_TX_OUT         PPS_OUT_U1TX
-#define       _SER1_TX_PIN         2
-#define       _SER1_RX_IN          PPS_IN_U1RX
-#define       _SER1_RX_PIN         4
+#define       _SER0_BASE           _UART2_BASE_ADDRESS
+#define       _SER0_IRQ            _UART2_ERR_IRQ
+#define       _SER0_VECTOR         _UART_2_VECTOR
+#define       _SER0_IPL_ISR        _UART2_IPL_ISR
+#define       _SER0_IPL            _UART2_IPL_IPC
+#define       _SER0_SPL            _UART2_SPL_IPC
+#define       _SER0_TX_OUT         PPS_OUT_U2TX 
+#define       _SER0_TX_PIN         21
+#define       _SER0_RX_IN          PPS_IN_U2RX
+#define       _SER0_RX_PIN         22
 
 
 /* ------------------------------------------------------------ */
