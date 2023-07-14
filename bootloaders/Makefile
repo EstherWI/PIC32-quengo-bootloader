@@ -65,6 +65,16 @@ DEF_quengo-mx1=-D_BOARD_QUENGO_MX1_
 LKR_quengo-mx1=MX1-2-boot-linkerscript.ld
 CFL_quengo-mx1=-mips16
 
+# Quengo configurations SERIAL
+
+BIN_quengo-s=QUENGO_SERIAL
+OBJ_quengo-s=main.o
+CRT_quengo-s=crt0.S
+MCU_quengo-s=32MX270F256D
+DEF_quengo-s=-D_BOARD_QUENGO_SERIAL_
+LKR_quengo-s=MX1-2-boot-linkerscript.ld
+CFL_quengo-s=-mips16
+
 #Microchip 32MZ starter kit.
 BIN_microchip-eth-sk-uart=Microchip_Eth_Starter_Kit_UART
 OBJ_microchip-eth-sk-uart=main.o pic32_init_tlb_ebi_sqi.o pic32_init_cache.o
