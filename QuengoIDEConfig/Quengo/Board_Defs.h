@@ -69,13 +69,13 @@
 */
 #define	NUM_DIGITAL_PINS	26
 #define	NUM_ANALOG_PINS		7
-#define NUM_OC_PINS			5 // ??
+#define NUM_OC_PINS			0 // ??
 #define	NUM_IC_PINS			0 // ??
 #define	NUM_TCK_PINS		0 // ??
 #define	NUM_INT_PINS		2
 
 #define	NUM_SERIAL_PORTS	1     
-#define	NUM_SPI_PORTS		1 // não defini
+#define	NUM_SPI_PORTS		0 // não defini
 #define	NUM_I2C_PORTS		1     
 
 #define NUM_DSPI_PORTS		2
@@ -84,7 +84,7 @@
 /* Define I/O devices on the board.
 */
 // Nessa placa não precisa
-#define	NUM_LED				3
+#define	NUM_LED				2
 #define NUM_BTN				1
 #define	NUM_SWT				0
 #define NUM_SERVO			0
@@ -98,9 +98,8 @@
 
 /* Define the pin numbers for the LEDs
 */
-#define	PIN_LED1	22
-#define	PIN_LED2	23
-#define	PIN_LED3	24
+#define	PIN_LED1	12 // RA7
+#define	PIN_LED2	16 // RA10
 
 #define PIN_LED_TX  23
 #define PIN_LED_RX  24
@@ -136,31 +135,26 @@
 /*					Timer Pin Declarations						*/
 /* ------------------------------------------------------------ */
 
-// ??
-#define PIN_OC1		 6
-#define	PIN_OC2		 5
-#define	PIN_OC3		 3
-#define	PIN_OC4		 9
-#define	PIN_OC5	    10
+// 
 
-#define PIN_IC1		 4
-#define PIN_IC2		 7
-#define PIN_IC3		12
-#define PIN_IC4		 2
-#define	PIN_IC5		11
+// #define PIN_IC1		 4
+// #define PIN_IC2		 7
+// #define PIN_IC3		12
+// #define PIN_IC4		 2
+// #define	PIN_IC5		11
 
-#define	PIN_TCK1	18
-#define	PIN_TCK2	14
-#define	PIN_TCK3	12
-#define	PIN_TCK4	 6
-#define	PIN_TCK5	 3
+// #define	PIN_TCK1	18
+// #define	PIN_TCK2	14
+// #define	PIN_TCK3	12
+// #define	PIN_TCK4	 6
+// #define	PIN_TCK5	 3
 
 /* ------------------------------------------------------------ */
 /*					Interrupt Pin Declarations					*/
 /* ------------------------------------------------------------ */
 
-#define	PIN_INT0	 38      // RC5 = 2
-#define	PIN_INT3	 20      // RA1 = 3
+#define	PIN_INT0	 10      // RC5 = 2
+#define	PIN_INT3	 27      // RA1 = 3
 
 /* ------------------------------------------------------------ */
 /*					SPI Pin Declarations						*/
@@ -175,8 +169,8 @@
 
 /* The Digilent DSPI library uses these ports.
 */
-#define	PIN_DSPI0_SS	10
-#define	PIN_DSPI1_SS	 9
+// #define	PIN_DSPI0_SS	10
+// #define	PIN_DSPI1_SS	 9
 /* ------------------------------------------------------------ */
 /*					Analog Pins									*/
 /* ------------------------------------------------------------ */
@@ -184,13 +178,13 @@
 ** used to map an analog pin number to the corresponding digital
 ** pin number.
 */
-#define	A0		19 // RA0
-#define	A1		20 // RA1
-#define A4		23 // RB2
-#define A5		24 // RB3
-#define A9      15 // RB15
-#define A10     14 // RB14
-#define A11     26 // RC1
+#define	A0		1 // RA0
+#define	A1		27 // RA1
+#define A4		28 // RB2
+#define A5		29 // RB3
+#define A9      2 // RB15
+#define A10     3 // RB14
+#define A11     0 // RC1
 
 /* ------------------------------------------------------------ */
 /*					Change Notice Pins							*/
@@ -264,7 +258,6 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 /* for the core. They are not normally needed by a user sketch.	*/
 /* ------------------------------------------------------------ */
 
-#if defined(OPT_BOARD_INTERNAL)
 
 /* ------------------------------------------------------------ */
 /*				Core Configuration Declarations					*/
@@ -301,9 +294,9 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 #define       _SER0_IPL            _UART2_IPL_IPC
 #define       _SER0_SPL            _UART2_SPL_IPC
 #define       _SER0_TX_OUT         PPS_OUT_U2TX 
-#define       _SER0_TX_PIN         21
+#define       _SER0_TX_PIN         23
 #define       _SER0_RX_IN          PPS_IN_U2RX
-#define       _SER0_RX_PIN         22
+#define       _SER0_RX_PIN         24
 
 
 /* ------------------------------------------------------------ */
@@ -312,54 +305,54 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 
 /* The default SPI port uses SPI1.
 */
-#define	_SPI_BASE		_SPI2_BASE_ADDRESS
-#define _SPI_ERR_IRQ	_SPI2_ERR_IRQ
-#define	_SPI_RX_IRQ		_SPI2_RX_IRQ
-#define	_SPI_TX_IRQ		_SPI2_TX_IRQ
-#define	_SPI_VECTOR		_SPI_2_VECTOR
-#define	_SPI_IPL_ISR	_SPI2_IPL_ISR
-#define	_SPI_IPL		_SPI2_IPL_IPC
-#define	_SPI_SPL		_SPI2_SPL_IPC
+// #define	_SPI_BASE		_SPI2_BASE_ADDRESS
+// #define _SPI_ERR_IRQ	_SPI2_ERR_IRQ
+// #define	_SPI_RX_IRQ		_SPI2_RX_IRQ
+// #define	_SPI_TX_IRQ		_SPI2_TX_IRQ
+// #define	_SPI_VECTOR		_SPI_2_VECTOR
+// #define	_SPI_IPL_ISR	_SPI2_IPL_ISR
+// #define	_SPI_IPL		_SPI2_IPL_IPC
+// #define	_SPI_SPL		_SPI2_SPL_IPC
 
 /* SPI pin declarations
 */
-#define _SPI_MISO_IN	PPS_IN_SDI2
-#define	_SPI_MISO_PIN	12
-#define _SPI_MOSI_OUT	PPS_OUT_SDO2
-#define	_SPI_MOSI_PIN	11
+// #define _SPI_MISO_IN	PPS_IN_SDI2
+// #define	_SPI_MISO_PIN	12
+// #define _SPI_MOSI_OUT	PPS_OUT_SDO2
+// #define	_SPI_MOSI_PIN	11
 
-/* SPI1 
-*/
+// /* SPI1 
+// */
 
-#define	_DSPI0_BASE			_SPI1_BASE_ADDRESS
-#define	_DSPI0_ERR_IRQ		_SPI1_ERR_IRQ
-#define	_DSPI0_RX_IRQ		_SPI1_RX_IRQ
-#define	_DSPI0_TX_IRQ		_SPI1_TX_IRQ
-#define	_DSPI0_VECTOR		_SPI_1_VECTOR
-#define	_DSPI0_IPL_ISR		_SPI1_IPL_ISR
-#define	_DSPI0_IPL			_SPI1_IPL_IPC
-#define	_DSPI0_SPL			_SPI1_SPL_IPC
+// #define	_DSPI0_BASE			_SPI1_BASE_ADDRESS
+// #define	_DSPI0_ERR_IRQ		_SPI1_ERR_IRQ
+// #define	_DSPI0_RX_IRQ		_SPI1_RX_IRQ
+// #define	_DSPI0_TX_IRQ		_SPI1_TX_IRQ
+// #define	_DSPI0_VECTOR		_SPI_1_VECTOR
+// #define	_DSPI0_IPL_ISR		_SPI1_IPL_ISR
+// #define	_DSPI0_IPL			_SPI1_IPL_IPC
+// #define	_DSPI0_SPL			_SPI1_SPL_IPC
 
-#define _DSPI0_MISO_IN		PPS_IN_SDI1
-#define _DSPI0_MISO_PIN		12
-#define _DSPI0_MOSI_OUT		PPS_OUT_SDO1
-#define _DSPI0_MOSI_PIN		11
+// #define _DSPI0_MISO_IN		PPS_IN_SDI1
+// #define _DSPI0_MISO_PIN		12
+// #define _DSPI0_MOSI_OUT		PPS_OUT_SDO1
+// #define _DSPI0_MOSI_PIN		11
 
-/* SPI2 
-*/
-#define	_DSPI1_BASE			_SPI2_BASE_ADDRESS
-#define	_DSPI1_ERR_IRQ		_SPI2_ERR_IRQ
-#define	_DSPI1_RX_IRQ		_SPI2_RX_IRQ
-#define	_DSPI1_TX_IRQ		_SPI2_TX_IRQ
-#define	_DSPI1_VECTOR		_SPI_2_VECTOR
-#define	_DSPI1_IPL_ISR		_SPI2_IPL_ISR
-#define	_DSPI1_IPL			_SPI2_IPL_IPC
-#define	_DSPI1_SPL			_SPI2_SPL_IPC
+// /* SPI2 
+// */
+// #define	_DSPI1_BASE			_SPI2_BASE_ADDRESS
+// #define	_DSPI1_ERR_IRQ		_SPI2_ERR_IRQ
+// #define	_DSPI1_RX_IRQ		_SPI2_RX_IRQ
+// #define	_DSPI1_TX_IRQ		_SPI2_TX_IRQ
+// #define	_DSPI1_VECTOR		_SPI_2_VECTOR
+// #define	_DSPI1_IPL_ISR		_SPI2_IPL_ISR
+// #define	_DSPI1_IPL			_SPI2_IPL_IPC
+// #define	_DSPI1_SPL			_SPI2_SPL_IPC
 
-#define _DSPI1_MISO_IN		PPS_IN_SDI2
-#define _DSPI1_MISO_PIN		25
-#define _DSPI1_MOSI_OUT		PPS_OUT_SDO2
-#define _DSPI1_MOSI_PIN		27
+// #define _DSPI1_MISO_IN		PPS_IN_SDI2
+// #define _DSPI1_MISO_PIN		25
+// #define _DSPI1_MOSI_OUT		PPS_OUT_SDO2
+// #define _DSPI1_MOSI_PIN		27
 
 /* ------------------------------------------------------------ */
 /*					I2C Port Declarations						*/
@@ -403,7 +396,6 @@ extern const uint8_t	external_int_to_digital_pin_PGM[];
 
 /* ------------------------------------------------------------ */
 
-#endif	// OPT_BOARD_INTERNAL
 
 /* ------------------------------------------------------------ */
 
