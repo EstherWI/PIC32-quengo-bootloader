@@ -293,41 +293,41 @@ const uint8_t digital_pin_to_pps_out_PGM[] = {
 ** access the table redefined as well.
 */
 const uint8_t digital_pin_to_pps_in_PGM[] = {
-    _PPS_IN(_PPS_RPC1 ), // 0 = RC1 (RX)
-    _PPS_IN(_PPS_RPA0 ), // 1 = RA0 (TX)
-    _PPS_IN(_PPS_RPB15 ), // 2 = RB15 (INT0)
-    _PPS_IN(_PPS_RPB14 ), // 3 = RB14 (INT1)
-    _PPS_IN(_PPS_RPA8 ), // 4 = RA8 (INT2)
-    _PPS_IN(_PPS_RPB4 ), // 5 = RB4 (INT3)
-    _PPS_IN(_PPS_RPA4 ), // 6 = RA4 (INT4)
-    _PPS_IN(_PPS_RPA9 ), // 7 = RA9
+    _PPS_IN(_PPS_RPC1), // 0 = RC1 (RX)
+    _PPS_IN(_PPS_RPA0), // 1 = RA0 (TX)
+    _PPS_IN(_PPS_RPB15), // 2 = RB15 (INT0)
+    _PPS_IN(_PPS_RPB14), // 3 = RB14 (INT1)
+    _PPS_IN(_PPS_RPA8), // 4 = RA8 (INT2)
+    _PPS_IN(_PPS_RPB4), // 5 = RB4 (INT3)
+    _PPS_IN(_PPS_RPA4), // 6 = RA4 (INT4)
+    _PPS_IN(_PPS_RPA9), // 7 = RA9
 
-    _PPS_IN(_PPS_RPC3 ), // 8 = RC3
-    _PPS_IN(_PPS_RPC4 ), // 9 = RC4
-    _PPS_IN(_PPS_RPC5 ), // 10 = RC5
-    _PPS_IN(_PPS_RPB5 ), // 11 = RB5
-    _PPS_IN(_PPS_RPA7 ), // 12 = RA7
+    _PPS_IN(_PPS_RPC3), // 8 = RC3
+    _PPS_IN(_PPS_RPC4), // 9 = RC4
+    _PPS_IN(_PPS_RPC5), // 10 = RC5
+    _PPS_IN(_PPS_RPB5), // 11 = RB5
+    _PPS_IN(_PPS_RPA7), // 12 = RA7
     _PPS_IN(_PPS_RPC8), // 13 = RC8
 
-    _PPS_IN(_PPS_RPB10 ), // A0 = RB10
-    _PPS_IN(_PPS_RPB11 ), // A1 = RB11
-    _PPS_IN(_PPS_RPA10 ), // A2 = RA10
-    _PPS_IN(_PPS_RPC0 ), // A3 = RC0
-    _PPS_IN(_PPS_RPC2 ), // A4 = RC2
-    _PPS_IN(_PPS_RPB7 ), // A5 = RB7
+    _PPS_IN(_PPS_RPB10), // A0 = RB10
+    _PPS_IN(_PPS_RPB11), // A1 = RB11
+    _PPS_IN(_PPS_RPA10), // A2 = RA10
+    _PPS_IN(_PPS_RPC0), // A3 = RC0
+    _PPS_IN(_PPS_RPC2), // A4 = RC2
+    _PPS_IN(_PPS_RPB7), // A5 = RB7
 
-    _PPS_IN(_PPS_RPB9 ), // AREF = RB9
-    _PPS_IN(_PPS_RPC9 ), // PROG = RC9
+    _PPS_IN(_PPS_RPB9), // AREF = RB9
+    _PPS_IN(_PPS_RPC9), // PROG = RC9
     NOT_PPS_PIN,           // L = RB9
     NOT_PPS_PIN,           // TX = RB0
-    _PPS_IN(_PPS_RPB1 ), // RX = RB1
+    _PPS_IN(_PPS_RPB1), // RX = RB1
 
-    _PPS_IN(_PPS_RPC6 ), // MISO = RC6
+    _PPS_IN(_PPS_RPC6), // MISO = RC6
     _PPS_IN(_PPS_RPC7), // SCK = RC7
-    _PPS_IN(_PPS_RPA1 ), // MOSI = RA1
+    _PPS_IN(_PPS_RPA1), // MOSI = RA1
 
-    _PPS_IN(_PPS_RPB2 ), // SDA = RB2
-    _PPS_IN(_PPS_RPB3 ), // SCL = RB3
+    _PPS_IN(_PPS_RPB2), // SDA = RB2
+    _PPS_IN(_PPS_RPB3), // SCL = RB3
 };
 
 /* ------------------------------------------------------------ */
@@ -372,7 +372,6 @@ const uint8_t digital_pin_to_analog_PGM[] = {
     NOT_ANALOG_PIN, //  17 
     NOT_ANALOG_PIN, //  18 
     NOT_ANALOG_PIN, //  13 
-
     // Analog pins
     // _BOARD_AN0,     // A0 = RA0 = 14
     // _BOARD_AN1,     // A1 = RA1 = 15

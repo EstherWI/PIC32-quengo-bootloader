@@ -67,14 +67,14 @@
 
 /* Define the peripherals available on the board.
 */
-#define	NUM_DIGITAL_PINS	26
-#define	NUM_ANALOG_PINS		7
+#define	NUM_DIGITAL_PINS	30
+#define	NUM_ANALOG_PINS		0
 #define NUM_OC_PINS			0 // ??
 #define	NUM_IC_PINS			0 // ??
 #define	NUM_TCK_PINS		0 // ??
-#define	NUM_INT_PINS		2
+#define	NUM_INT_PINS		5
 
-#define	NUM_SERIAL_PORTS	1     
+#define	NUM_SERIAL_PORTS	2     
 #define	NUM_SPI_PORTS		0 // não defini
 #define	NUM_I2C_PORTS		1     
 
@@ -154,7 +154,11 @@
 /* ------------------------------------------------------------ */
 
 #define	PIN_INT0	 10      // RC5 = 2
+#define	PIN_INT1	 10      // RC5 = 2
+#define	PIN_INT2	 10      // RC5 = 2
 #define	PIN_INT3	 27      // RA1 = 3
+#define	PIN_INT4	 10      // RC5 = 2
+
 
 /* ------------------------------------------------------------ */
 /*					SPI Pin Declarations						*/
@@ -178,13 +182,13 @@
 ** used to map an analog pin number to the corresponding digital
 ** pin number.
 */
-#define	A0		1 // RA0
-#define	A1		27 // RA1
-#define A4		28 // RB2
-#define A5		29 // RB3
-#define A9      2 // RB15
-#define A10     3 // RB14
-#define A11     0 // RC1
+// #define	A0		1 // RA0
+// #define	A1		27 // RA1
+// #define A4		28 // RB2
+// #define A5		29 // RB3
+// #define A9      2 // RB15
+// #define A10     3 // RB14
+// #define A11     0 // RC1
 
 /* ------------------------------------------------------------ */
 /*					Change Notice Pins							*/
