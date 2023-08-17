@@ -115,8 +115,8 @@
     #pragma config IOL1WAY  = OFF                           		// Allow multiple reconfigurations
 #endif
 
-	// LED1 on RA0
-	// LED2 on RB15
+	// LED2 on RA10 boot led
+    // Prog button RB13
 	// Boot button on RB9
     #define CAPABILITIES    (blCapBootLED | blCapUARTInterface | blCapProgramButton | blCapVirtualProgramButton | CAPCOMMON)
 
@@ -126,7 +126,7 @@
 
     // Boot LED
     #define BLedLat     A
-    #define BLedBit     0
+    #define BLedBit     10
 
     // Virtual program button
     #define VPBntLat    B
@@ -134,7 +134,7 @@
 
     // Program button
     #define PBntPort    B
-    #define PBntBit     9
+    #define PBntBit     13
 
     // Other capabilities
     #define BOOTLOADER_UART             2                   // avrdude program UART
